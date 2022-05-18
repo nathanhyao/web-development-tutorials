@@ -1,4 +1,4 @@
-# notes
+# setup notes
 
 1. VS Code: Install **Live Sass Compiler** and **Live Server** by Ritwick Dey
 2. Project folder: Create *index.html*, css folder, and *main.scss* (scss for **SASS**, CSS extension)
