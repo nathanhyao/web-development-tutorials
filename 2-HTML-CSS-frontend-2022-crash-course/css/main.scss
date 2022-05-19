@@ -24,6 +24,7 @@ a {
     width: 100%;
     height: 100vh;
     z-index: -1;
+    animation: introLoad 2s forwards;
     // overflow: hidden;
 }
 
@@ -48,6 +49,7 @@ nav {
         float: right;
         margin: 2em;
         width: 2.5em;
+        cursor: pointer;
     }
 
     ul {
@@ -67,12 +69,16 @@ nav {
     }
 }
 
+.open-nav {
+    transform: translateX(0%);
+}
+
 header {
     display: flex;
     justify-content: space-between;
 
     .menu {
-        width: 3em;
+        width: 2.5em;
         margin-top: -0.6em;
         cursor: pointer;
     }
@@ -90,13 +96,17 @@ h1 {
 
 .hero {
     color: white;
-    height: 90vh;
+    height: 80vh;
+    margin-bottom: 10vh;
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
 
     .down-arrow {
         stroke: white;
         position: absolute;
         bottom: 2em;
         width: 1em;
+        animation: moveArrow 1s alternate-reverse infinite;
 
         path {
             fill: white;
@@ -121,15 +131,19 @@ h1 {
     }
 }
 
-// when screen width reaches 680px, do:
 @media only screen and (min-width: 680px) {
+
+    // breakpoint: when screen width at least 680px:
     body {
         margin: 1.5em 5em;
         font-family: "Poppins", sans-serif;
     }
+
+    .subhead {
+        margin-bottom: 5em;
+    }
 }
 
-// when screen width reaches 920px, do:
 @media only screen and (min-width: 920px) {
     .menu {
         display: none;
@@ -183,7 +197,7 @@ h1 {
         color: black;
         height: auto;
         width: 40%;
-        margin-bottom: 8em;
+        margin-bottom: 12em;
 
         svg.down-arrow {
             stroke: black;
@@ -193,5 +207,80 @@ h1 {
                 fill: black;
             }
         }
+    }
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 3em;
+        margin-bottom: 4em;
+
+        img {
+            width: 25em;
+        }
+
+        .content {
+            text-align: right;
+            width: 25em;
+        }
+    }
+
+    .feature.flip {
+        grid-template-areas:
+            "left right";
+
+        img {
+            grid-area: left;
+        }
+
+        .content {
+            text-align: left;
+            width: 25em;
+            justify-self: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        gap: 0;
+    }
+}
+
+@keyframes introLoad {
+
+    // copied keyframes from: https://bennettfeely.com/clippy/
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
