@@ -1,6 +1,5 @@
 body {
-    // e.g., affects all elements in html <body> tag
-    margin: 1.5em; // VS Code: hover over syntax for desc.
+    margin: 1.5em;
     font-family: "Poppins", sans-serif;
 }
 
@@ -11,6 +10,7 @@ a {
 
 /** 
  * Designing mobile interface first
+ * VS Code tip: hover over syntax for desc.
 **/
 
 .hero-img {
@@ -131,9 +131,12 @@ h1 {
     }
 }
 
-@media only screen and (min-width: 680px) {
+/**
+ * Breakpoints: when screen width reaches min-width, 
+ * override certain CSS ruleset declarations.
+ */
 
-    // breakpoint: when screen width at least 680px:
+@media only screen and (min-width: 680px) {
     body {
         margin: 1.5em 5em;
         font-family: "Poppins", sans-serif;
@@ -253,9 +256,8 @@ h1 {
 }
 
 @keyframes introLoad {
-
-    // copied keyframes from: https://bennettfeely.com/clippy/
     from {
+        // copied keyframes from: https://bennettfeely.com/clippy/
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
