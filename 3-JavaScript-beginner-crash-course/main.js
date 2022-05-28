@@ -147,5 +147,42 @@ while (i <= 5) {
 }
 
 // Do while (1:04:00)
+let j = 1
+do {
+    console.log('Do-while loop iteration #' + j++)
+} while (j <= 5)
 
 // For ... of
+const numArray = [1, 2, 3, 4, 5]
+for (const num of numArray) {
+    console.log('For ... of loop iteration #' + num)
+}
+
+// Functions
+
+function greet(username) {
+    console.log('Good morning ' + username)
+}
+greet('Bruce')
+greet('Clark')
+greet('Diana')
+
+function add(a, b) {
+    return a + b
+}
+console.log(add('hello', ' there'))
+console.log("5 + 10 = " + add(5, 10))
+
+// Arrow functions
+const arrowSum = (a, b) => a + b // implicit return, same line
+console.log('Arrow functions: ' + arrowSum('hello', ' there')) // same output
+console.log('Arrow functions: 5 + 10 = ' + arrowSum(5, 10))
+
+const addFive = num => num + 5 // one argument, optional parentheses
+console.log("Arrow functions: 5 + 5 = " + addFive(5))
+
+// Scope
+
+// Block scope
+// Function scope
+// Global scope (doesn't overwrite block/function scope)
