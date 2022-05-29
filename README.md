@@ -12,4 +12,5 @@ Accumulative knowledge base for personal web-dev learning
 2. completed [Learn HTML & CSS in 2022 | Crash Course](https://www.youtube.com/watch?v=gXLjWRteuWI&t=960s)
 3. completed [JavaScript Crash Course 2022 - Tutorial for Complete Beginners](https://www.youtube.com/watch?v=XIOLqoPHCJ4&t=2617s)
 4. completed [NEW!! Web Developer Roadmap 2022 | Ultimate Guide To Starting A Career In Web Development](https://www.youtube.com/watch?v=7uJGjbkp0-U)
-5. [Advanced JavaScript Crash Course 2022](https://www.youtube.com/watch?v=R9I85RhI7Cg)
+5. progress [Introduction to Full Stack Web Dev Crash Course - 4 Hour Tutorial](https://www.youtube.com/watch?v=8x19xdpIAiQ&t=445s)
+6. [Advanced JavaScript Crash Course 2022](https://www.youtube.com/watch?v=R9I85RhI7Cg)
